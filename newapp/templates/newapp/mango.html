@@ -1,0 +1,9 @@
+{% extends 'newapp\layout.html' %}
+{% load static %}
+{% block title %}
+Mango
+{% endblock %}
+{% block content %}
+This is Mango. Its yellow. Its good for health.
+<img src="{% static 'images/mango.png' %}" height="150px" width="200px">
+{% endblock %}

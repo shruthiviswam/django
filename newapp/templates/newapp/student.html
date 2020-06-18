@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title> Home </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+ {% for student in students %}
+<h1>{{student.name}}</h1>
+<h2>{{student.age}}</h2>
+<h3>{{student.address}}</h3>
+
+{% endfor %}
+
+</body>
+</html>

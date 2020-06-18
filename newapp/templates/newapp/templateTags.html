@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title> Home </title>
+
+</head>
+<body>
+{{text}}
+{% for key,value in dict1.items %}
+    <h5>{{key}}:{{value|upper}}</h5>
+{% endfor %}
+
+{% for val in list1 %}
+    {{val}}
+{% endfor %}
+
+{% if num %}
+    <h3> Value is : {{num}}</h3>
+{% else %}
+    context is empty
+{% endif %}
+
+</body>
+</html>

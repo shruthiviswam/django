@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title> Home </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<h1> {{head}} </h1>
+<p>
+    {{s}}
+</p>
+<table>
+    <tr>
+        <td>
+            {{a}}
+        </td>
+        <td>
+              {{b}}
+        </td>
+        <td>
+            {{c}}
+        </td>
+        <td>
+                {{d}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="{% static 'images/apple.jpg' %}" height="150px" width="150px">
+        </td>
+        <td>
+            <img src="{% static 'images/mango.png' %}" height="150px" width="200px">
+        </td>
+        <td>
+            <img src="{% static 'images/orange.jpg' %}" height="150px" width="150px">
+        </td>
+        <td>
+            <img src="{% static 'images/strawberry.jpg' %}" height="150px" width="150px">
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

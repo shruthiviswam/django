@@ -1,0 +1,66 @@
+Rest API Framework
+----------------------------
+
+Django Rest API  is an application used for rapidly building RESTful APIs based on Django models.
+
+Installation
+---------------
+
+1. pip install djangorestframework
+
+2. Add 'rest_framework' to your INSTALLED_APPS setting
+
+3. myapp/models.py
+
+    from django.db import models
+    class Student (models.Model):
+        name = models.CharField(max_length = 20)
+        address = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+4. myapp/admin.py
+
+    from django.contrib import admin
+    from .models import Student
+    
+    admin.site.register(Student)
+
+5. Create a new file serializers.py
+ 
+    from rest_framework import serializers
+    from .import models
+    class StudentSerializer(serializers.ModelSerializer):
+        class Meta:
+            fields = ('id','name','address')
+            model = models.Student
+
+6. In views.py
+
+    from django.shortcuts impport render
+    from rest_framework import generics
+    from .models import Student
+    from .import serializers
+    
+    class ListStudent(generics.ListCreateAPIView):
+        queryset = Student.objects.all()
+        serializer_class = serializers.StudentSerializer
+
+    class DetailStudent(generics.RetrieveUpdateDestroyAPIView):
+        queryset = Student.objects.all()
+        serializer_class = serializers.StudentSerializer
+
+7. Update urls.py
+
+    from django.urls import path
+    from .import views
+    urlpatterns = [
+        path('api/',views.ListStudent.as_view()),
+        path('<int:pk>/',views.DetailStudent.as_view())
+    ]
+
+8. Check output
+
+    Listview is at http://127.0.0.1:8000/api/
+    DetailView is at http://127.0.0.1:8000/2/
