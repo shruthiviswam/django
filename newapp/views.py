@@ -223,6 +223,7 @@ def employeedetails(request):
     employees=EmployeeData.objects.all()
     return render(request,'newapp/employeedetails.html',{'employees':employees})
 
+
 def emailconsole(request):
     send_mail('subject','Hello World','abc@gmail.com',['to_mail'],fail_silently=False)
     return HttpResponse('Mail Sent Successfully!')
