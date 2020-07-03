@@ -102,3 +102,23 @@ Run the app :
 ```
 >python manage.py runserver
 ```
+
+
+## Structure of Django :
+
+The initial project structure is composed of five files. 
+
+### manage.py : 
+Its a shortcut to use the django-admin command line utility. Its used to run management commands related to the project. It will be used to run the devolopment server, run tests, create migrations and much more.
+
+### __init__.py : 
+This empty file tells Python that its a Python Package.
+
+### settings.py : 
+It contains all the project's configuration. To add any new features, this is the file to make changes first.
+
+### urls.py:
+Its responsible for mapping the routes and paths in the project. 
+
+### wsgi.py:
+Its a simple geteway interface used for deployment.
