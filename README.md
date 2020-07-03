@@ -11,7 +11,8 @@ MVT - Model View Template
 #### V - View connects the database to the framework design. Templates and Models are connected by Views. 
 #### T - Template indicates web frameworks. It contains HTML,CSS,JS files to design the output.
 
-## Django Installation & Project Creation:
+
+# Django Installation & Project Creation:
 
 ### Step 1 : 
 
@@ -104,7 +105,8 @@ Run the app :
 ```
 
 
-## Structure of Django :
+
+# Structure of Django :
 
 The initial project structure is composed of five files. 
 
