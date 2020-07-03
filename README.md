@@ -6,10 +6,10 @@ There are two main models/architecture used by frameworks :
 MVC - Model View Controller
 MVT - Model View Template
 
-Django uses MVT.
-M - Model indicates databases. Databases are created in models.py. Models are fully class based.
-V - View connects the database to the framework design. Templates and Models are connected by Views. 
-T - Template indicates web frameworks. It contains HTML,CSS,JS files to design the output.
+### Django uses MVT.
+#### M - Model indicates databases. Databases are created in models.py. Models are fully class based.
+#### V - View connects the database to the framework design. Templates and Models are connected by Views. 
+#### T - Template indicates web frameworks. It contains HTML,CSS,JS files to design the output.
 
 ## Django Installation & Project Creation:
 
