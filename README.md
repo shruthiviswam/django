@@ -1,5 +1,16 @@
 # Django
 
+Django is a high-level Python Web framework that encourages rapid devolopment and clean pragmatic design. A Web framework is a set of components that provide a standard way to devolop websites fast and easy.
+
+There are two main models/architecture used by frameworks :
+MVC - Model View Controller
+MVT - Model View Template
+
+Django uses MVT.
+M - Model indicates databases. Databases are created in models.py. Models are fully class based.
+V - View connects the database to the framework design. Templates and Models are connected by Views. 
+T - Template indicates web frameworks. It contains HTML,CSS,JS files to design the output.
+
 ## Django Installation & Project Creation:
 
 ### Step 1 : 
