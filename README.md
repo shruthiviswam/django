@@ -124,3 +124,65 @@ Its responsible for mapping the routes and paths in the project.
 
 ### wsgi.py:
 Its a simple geteway interface used for deployment.
+
+
+# Django App Creation :
+
+## Step 1 :
+To create an app, go to the terminal of django folder 
+
+```
+>python manage.py startapp newapp
+```
+(here app name is "newapp"). A folder will be created as newaap.
+
+## Sep 2 :
+In settings.py (in project folder):
+
+```
+Add "newapp" to the list of Installed apps.
+```
+
+## Step 3 : 
+In urls.py (in project folder):
+
+```
+>from django.urls import path,include
+urlpatterns=[.................
+             ...............
+             path('newapp/',include('newapp.urls')),
+            ]
+```
+
+## Step 4 :
+Create a view in views.py :
+
+```
+from django.shortcuts import render
+from django.http import HttpResponse
+
+#Create views
+def home(request):
+return HttpResponse('Hello World!')
+```
+
+## Step 5 :
+Create urls.py in newapp folder
+
+```
+from django.urls import path
+from . import views
+urlpatterns=[
+          path('homepage',views.home)
+          ]
+```
+
+## Step 6 :
+In Terminal:
+
+```
+> python manage.py runserver
+```
+
+## Step 7:
+Go to localhost/newapp/homepage
